@@ -1,0 +1,74 @@
+/* Mobile and Tablet Specific Styles */
+@media (max-width: 767px) {
+    .product-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 products per row on mobile */
+    }
+  
+    .product-card {
+      max-width: 100%; /* Ensure product cards take full width in mobile view */
+      margin-bottom: 1.5rem; /* Space between cards on mobile */
+      padding: 0; /* Remove excess padding */
+    }
+  
+    .product-image {
+      height: auto; /* Allow image to adjust to screen size */
+      max-height: 300px; /* Limit image height */
+      object-fit: contain; /* Ensure image is well-suited to its container */
+    }
+  
+    .product-info {
+      padding: 1rem; /* Reduce padding for mobile */
+      font-size: 0.9rem; /* Slightly smaller text for mobile */
+    }
+  
+    .product-price {
+      font-size: 1rem; /* Adjust price font size for mobile */
+    }
+  
+    .sale-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      background-color: rgba(255, 0, 0, 0.8); /* Red background */
+      color: white;
+      padding: 4px 8px;
+      font-size: 0.75rem; /* Smaller badge size on mobile */
+      border-radius: 9999px;
+    }
+  
+    /* Adjust button size for mobile */
+    .button-quick-view, .button-buy-now {
+      font-size: 0.75rem;
+      padding: 0.5rem; /* Smaller buttons */
+      width: 48%; /* Fit two buttons side-by-side */
+    }
+  
+    .button-group {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      gap: 0.5rem; /* Add some space between buttons */
+    }
+  
+    .swatch-buttons {
+      flex-wrap: wrap; /* Allow color swatches to wrap in mobile */
+      gap: 0.5rem; /* Space between swatches */
+    }
+  
+    .swatch-button {
+      width: 2rem; /* Smaller swatches on mobile */
+      height: 2rem;
+    }
+  }
+  
+  /* Desktop and Tablet (Large) Styles - Do not change */
+  @media (min-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(3, 1fr); /* 3 products per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .product-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 products per row on large screens */
+    }
+  }
